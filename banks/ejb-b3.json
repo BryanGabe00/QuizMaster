@@ -1,0 +1,61 @@
+{
+	"name": "JavaScript Basics",
+	"id": "x2856m",
+	"entries": [
+		{
+			"question": {
+				"prompt": "Which of the following statements relating to JavaScript running in a Web browser is FALSE?",
+				"choices": [
+					"JavaScript can be used to update a file on your hard drive", 
+					"JavaScript can be used to change the style of an element", 
+					"JavaScript can be used to add additional content to a web page", 
+					"JavaScript can be used to remove content from a web page", 
+					"JavaScript can be used to request data from a Web server"]
+			},
+			"answer": "JavaScript can be used to update a file on your hard drive"
+		},
+		{
+			"question": {
+				"prompt": "Why would we create a question with 2 answers?",
+				"choices": [
+					"To test true and false type questions", 
+					"For the taste"]
+			},
+			"answer": "To test true and false type questions"
+		},
+		{
+			"question": {
+				"prompt": "Why would we create a question with 3 answers?",
+				"choices": [
+					"To test if it works with three answers", 
+					"abc (don't pick this answer)", 
+					"efg (this one is wrong also"]
+			},
+			"answer": "To test if it works with three answers"
+		},
+		{
+			"question": {
+				"prompt": "Why would we create a question with 4 answers?",
+				"choices": [
+					"To test if it works with four answers", 
+					"Answer 2 (wrong)", 
+					"Answer 3 (wrong)", 
+					"Answer 4 (wrong)"]
+			},
+			"answer": "To test if it works with four answers"
+		},
+		{
+			"question": {
+				"prompt": "Why would we create a question with 6 answers?",
+				"choices": [
+					"To test if it works with four answers", 
+					"Answer 2 (wrong)", 
+					"Answer 3 (wrong)", 
+					"Answer 4 (wrong)", 
+					"Answer 5 (wrong)", 
+					"Answer 6 (wrong)"]
+			},
+			"answer": "To test if it works with four answers"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"name": "Go Testing",
+	"id": "x2856k",
+	"entries": [
+		{
+			"question": {
+				"prompt": "Which of the following statements relating to automated testing and Go is true?",
+				"choices": [
+					"Go supports automated testing out of the box through a standard package named \u201Ctesting\u201D", 
+					"Go supports automated testing only through the use of third party packages", 
+					"Go supports automated testing out of the box through a standard package named \u201Cvalidation\u201D", 
+					"Go does not support automated testing", 
+					"Go supports automated testing only through external scripting using tools like Python"]
+			},
+			"answer": "Go supports automated testing out of the box through a standard package named \u201Ctesting\u201D"
+		},
+		{
+			"question": {
+				"prompt": "To execute a series of three tests on an application named \u201Ctiger\u201D what would we type?",
+				"choices": [
+					"go test", 
+					"go testing", 
+					"./tiger test", 
+					"./tiger testing", 
+					"go tiger testing"]
+			},
+			"answer": "go test"
+		}
+	]
+}

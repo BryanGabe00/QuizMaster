@@ -1,0 +1,27 @@
+{
+	"name": "bank-3",
+	"id": "3",
+	"entries": [
+		{
+			"question": {
+				"prompt": "b3-q1",
+				"choices": ["a", "b", "c"]
+			},
+			"answer": "c"
+		},
+		{
+			"question": {
+				"prompt": "b3-q2",
+				"choices": ["a", "b", "c"]
+			},
+			"answer": "b"
+		},
+		{
+			"question": {
+				"prompt": "b3-q3",
+				"choices": ["a", "b", "c"]
+			},
+			"answer": "a"
+		}
+	]
+}

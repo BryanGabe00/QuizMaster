@@ -1,0 +1,42 @@
+{
+	"name": "Go Basics",
+	"id": "x2856j",
+	"entries": [
+		{
+			"question": {
+				"prompt": "Which of the following statements relating to Go is FALSE?",
+				"choices": [
+					"Go supports class Inheritance", 
+					"Go supports Encapsulation", 
+					"Go supports Interfaces", 
+					"Go supports Polymorphism through interfaces", 
+					"Go supports Arrays"]
+			},
+			"answer": "Go supports class Inheritance"
+		},
+		{
+			"question": {
+				"prompt": "Which of the following Go statements will successfully create a new variable \u201Cx\u201d and set it to 5?",
+				"choices": [
+					"x := 5", 
+					"x == 5", 
+					"x = 5", 
+					"let x = 5", 
+					"set x = 5"]
+			},
+			"answer": "x := 5"
+		},
+		{
+			"question": {
+				"prompt": "Which of the following Go statements will successfully create a new variable \u201Cy\u201d and set it to the integer value 10?",
+				"choices": [
+					"y := 10", 
+					"let y = 10", 
+					"y = 10", 
+					"int y = 10", 
+					"set y = 10"]
+			},
+			"answer": "y := 10"
+		}
+	]
+}
