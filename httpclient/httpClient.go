@@ -56,9 +56,13 @@ func getInfo() {
 }
 
 func main() {
+	//test concurrency
+	for i := 0; i < 10; i++ {
+		go getInfo()
+		go sendRequest([]string{`1`, `2`}, []int{3, 3})
+	}
+
 	//send request to HTTP Server
-	//getInfo()
 	sendRequest([]string{`1`, `2`}, []int{3, 3})
-	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{1, 1, 1})
 	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{3, 2, 5})
 }
