@@ -13,7 +13,7 @@ func sendRequest(bankIDs []string, qCount []int) {
 	//prep and send POST request to localhost:80/req
 	req := quizjson.ReqJSON{IDs: bankIDs, Count: qCount}
 	bs := req.ToJSON()
-	resp, err := http.Post(`http://127.0.0.1/req`, `application/json`, bytes.NewBuffer(bs))
+	resp, err := http.Post(`https://quizmaster1.azurewebsites.net/req`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
 		log.Fatal(`Error: couldn't POST to localhost:80/req`)
 	}
@@ -35,7 +35,7 @@ func sendRequest(bankIDs []string, qCount []int) {
 func getInfo() {
 	//send POST request to localhost:80
 	bs := make([]byte, 10)
-	resp, err := http.Post(`http://127.0.0.1:80`, `application/json`, bytes.NewBuffer(bs))
+	resp, err := http.Post(`https://quizmaster1.azurewebsites.net`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
 		log.Fatal(`Error: couldn't POST to localhost:80`)
 	}
