@@ -10,12 +10,12 @@ import (
 )
 
 func sendRequest(bankIDs []string, qCount []int) {
-	//prep and send POST request to localhost:9000/req
+	//prep and send POST request to localhost:80/req
 	req := quizjson.ReqJSON{IDs: bankIDs, Count: qCount}
 	bs := req.ToJSON()
-	resp, err := http.Post(`http://127.0.0.1:9000/req`, `application/json`, bytes.NewBuffer(bs))
+	resp, err := http.Post(`http://127.0.0.1/req`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
-		log.Fatal(`Error: couldn't POST to localhost:9000/req`)
+		log.Fatal(`Error: couldn't POST to localhost:80/req`)
 	}
 	defer resp.Body.Close()
 
@@ -33,11 +33,11 @@ func sendRequest(bankIDs []string, qCount []int) {
 }
 
 func getInfo() {
-	//send POST request to localhost:9000
+	//send POST request to localhost:80
 	bs := make([]byte, 10)
-	resp, err := http.Post(`http://127.0.0.1:9000`, `application/json`, bytes.NewBuffer(bs))
+	resp, err := http.Post(`http://127.0.0.1:80`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
-		log.Fatal(`Error: couldn't POST to localhost:9000`)
+		log.Fatal(`Error: couldn't POST to localhost:80`)
 	}
 	defer resp.Body.Close()
 
@@ -58,7 +58,7 @@ func getInfo() {
 func main() {
 	//send request to HTTP Server
 	//getInfo()
-	//sendRequest([]string{`1`, `2`}, []int{3, 3})
+	sendRequest([]string{`1`, `2`}, []int{3, 3})
 	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{1, 1, 1})
-	sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{3, 2, 5})
+	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{3, 2, 5})
 }
