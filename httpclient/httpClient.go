@@ -70,6 +70,7 @@ func main() {
 
 	if len(args) > 1 {
 		fmt.Println("=======================================")
+		fmt.Println("Welcome to Help Page!")
 		fmt.Println("httpClient.go sends a request to a server.")
 		fmt.Println("Returns back a bank of questions and answers.")
 		fmt.Println("=======================================")
