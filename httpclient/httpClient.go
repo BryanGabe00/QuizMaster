@@ -7,15 +7,16 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 func sendRequest(bankIDs []string, qCount []int) {
-	//prep and send POST request to localhost:80/req
+	//prep and send POST request to https://quizmaster1.azurewebsites.net/req
 	req := quizjson.ReqJSON{IDs: bankIDs, Count: qCount}
 	bs := req.ToJSON()
 	resp, err := http.Post(`https://quizmaster1.azurewebsites.net/req`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
-		log.Fatal(`Error: couldn't POST to localhost:80/req`)
+		log.Fatal(`Error: couldn't POST to https://quizmaster1.azurewebsites.net/req`)
 	}
 	defer resp.Body.Close()
 
@@ -33,11 +34,11 @@ func sendRequest(bankIDs []string, qCount []int) {
 }
 
 func getInfo() {
-	//send POST request to localhost:80
+	//send POST request to https://quizmaster1.azurewebsites.net/req
 	bs := make([]byte, 10)
 	resp, err := http.Post(`https://quizmaster1.azurewebsites.net`, `application/json`, bytes.NewBuffer(bs))
 	if err != nil {
-		log.Fatal(`Error: couldn't POST to localhost:80`)
+		log.Fatal(`Error: couldn't POST to https://quizmaster1.azurewebsites.net/req`)
 	}
 	defer resp.Body.Close()
 
@@ -58,7 +59,17 @@ func getInfo() {
 func main() {
 	//send request to HTTP Server
 	//getInfo()
-	sendRequest([]string{`1`, `2`}, []int{3, 3})
+
+	args := os.Args
+
+	if len(args) > 1 {
+		fmt.Println("=======================================")
+		fmt.Println("httpClient.go sends a request to a server.")
+		fmt.Println("Returns back a bank of questions and answers.")
+		fmt.Println("=======================================")
+		os.Exit(0)
+	}
+	sendRequest([]string{`x2856m`, `x2856k`, "x2856j"}, []int{3, 2, 3})
 	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{1, 1, 1})
 	//sendRequest([]string{`x2856j`, `x2856k`, `x2856m`}, []int{3, 2, 5})
 }
