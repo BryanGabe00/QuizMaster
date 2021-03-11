@@ -6,5 +6,5 @@ RUN mkdir /src/QuizMaster
 ADD . /src/QuizMaster
 WORKDIR /src/QuizMaster/httpserver
 RUN go build -o main .
-EXPOSE 9000
+EXPOSE 80
 CMD ["/src/QuizMaster/httpserver/main"]
