@@ -28,6 +28,7 @@ type Question struct {
 //String method allows printing Question struct as a string
 func (q Question) String() string {
 	retStr := q.Prompt + "\n"
+	retStr += "============================================\n"
 	for _, i := range q.Choices {
 		retStr += i + "\n"
 	}
